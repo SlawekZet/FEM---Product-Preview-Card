@@ -1,0 +1,13 @@
+@media only screen and (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cover-image img {
+    content: url(../images/image-product-mobile.jpg);
+  }
+
+  .product-description {
+    gap: 1rem;
+  }
+}

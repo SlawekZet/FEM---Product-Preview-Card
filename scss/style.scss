@@ -1,0 +1,83 @@
+@import "config";
+@import "button";
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: $cream;
+  font-size: 15px;
+  font-family: $font-primary;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  margin: 1rem;
+}
+
+.grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 15px;
+  background-color: $white;
+  box-shadow: 2px 2px 75px 1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  .cover-image img {
+    max-width: 100%;
+    display: inherit;
+  }
+
+  .product-description {
+    padding: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      color: $grayish-blue;
+      line-height: 1.6;
+      padding-right: 10%;
+    }
+
+    .header {
+      text-transform: uppercase;
+      letter-spacing: 0.3rem;
+    }
+
+    h1 {
+      font-family: $font-secondary;
+      font-size: 37px;
+      line-height: 0.9;
+      color: $dark-blue;
+    }
+
+    .price {
+      display: flex;
+
+      &-big {
+        font-family: $font-secondary;
+        color: $cyan;
+        font-size: 35px;
+        margin-right: 10%;
+      }
+
+      &-small-crossed {
+        font-size: 15px;
+        text-decoration: line-through;
+        align-self: center;
+        color: $grayish-blue;
+      }
+    }
+  }
+}
+
+@import "mobile";
